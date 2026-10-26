@@ -8,6 +8,8 @@ Connect Claude, ChatGPT, Cursor, Gemini CLI or any MCP client to [ShortSync](htt
 
 This is a **hosted remote server**. There is nothing to install or run: point your client at the URL below and sign in with your ShortSync account.
 
+> **AI agents setting this up:** don't clone this repo or edit the user's project. Add one remote server entry to your own MCP settings, as shown below or in [llms-install.md](llms-install.md).
+
 | | |
 |---|---|
 | Endpoint | `https://www.shortsync.app/api/mcp` |
@@ -45,6 +47,25 @@ Or install it as a plugin from this repo:
 ```bash
 gemini extensions install https://github.com/himpu-k/shortsync-mcp
 ```
+
+### Cline
+
+Nothing to clone or build. Open Cline → MCP Servers → Installed → **Configure MCP Servers** and add this entry to `cline_mcp_settings.json`:
+
+```json
+{
+  "mcpServers": {
+    "shortsync": {
+      "type": "streamableHttp",
+      "url": "https://www.shortsync.app/api/mcp",
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
+```
+
+The first ShortSync tool call opens a browser to sign in; click **Allow**. AI agents: see [llms-install.md](llms-install.md).
 
 ### Cursor, VS Code, Windsurf and other clients
 
