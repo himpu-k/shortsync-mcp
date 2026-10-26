@@ -1,0 +1,9 @@
+{
+  "name": "shortsync",
+  "description": "Schedule videos, images and posts to 17 social platforms, read analytics and reply to comments through the hosted ShortSync MCP server.",
+  "version": "1.1.0",
+  "author": {
+    "name": "ShortSync",
+    "email": "hilma@shortsync.app"
+  }
+}
