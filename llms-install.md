@@ -8,7 +8,9 @@ ShortSync is a **hosted remote MCP server**. There is nothing to clone, build or
 
 ## Cline
 
-Add this to `cline_mcp_settings.json` (Cline → MCP Servers → Installed → Configure MCP Servers):
+Easiest: in Cline open **MCP Servers** (Customize → MCP) → **Add Remote Server**, name `shortsync`, URL `https://www.shortsync.app/api/mcp`, transport **Streamable HTTP**.
+
+To edit the file instead, open it with **Edit Configuration** on that same screen so you change the file Cline actually loads. In current Cline versions it is `~/.cline/data/settings/cline_mcp_settings.json` (Windows: `%USERPROFILE%\.cline\data\settings\cline_mcp_settings.json`). Older versions used `globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json` inside the VS Code user folder; newer versions ignore that file. Add:
 
 ```json
 {
@@ -23,7 +25,7 @@ Add this to `cline_mcp_settings.json` (Cline → MCP Servers → Installed → C
 }
 ```
 
-If the file already has other servers, add the `shortsync` entry inside the existing `mcpServers` object instead of replacing it.
+If the file already has other servers, add the `shortsync` entry inside the existing `mcpServers` object instead of replacing it. Afterwards, check that `shortsync` appears under MCP Servers → Installed; if it doesn't, you edited a file Cline doesn't load.
 
 ## Sign-in
 

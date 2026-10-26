@@ -50,7 +50,7 @@ gemini extensions install https://github.com/himpu-k/shortsync-mcp
 
 ### Cline
 
-Nothing to clone or build. Open Cline → MCP Servers → Installed → **Configure MCP Servers** and add this entry to `cline_mcp_settings.json`:
+Nothing to clone or build. In Cline open **MCP Servers** → **Add Remote Server**: name `shortsync`, URL `https://www.shortsync.app/api/mcp`, transport Streamable HTTP. Or click **Edit Configuration** on that screen (current versions use `~/.cline/data/settings/cline_mcp_settings.json`) and add:
 
 ```json
 {
