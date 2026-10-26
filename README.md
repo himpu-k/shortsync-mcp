@@ -4,6 +4,8 @@
 
 # ShortSync MCP server
 
+[![ShortSync MCP server on Glama](https://glama.ai/mcp/connectors/app.shortsync/shortsync/badges/score.svg)](https://glama.ai/mcp/connectors/app.shortsync/shortsync)
+
 Connect Claude, ChatGPT, Cursor, Gemini CLI or any MCP client to [ShortSync](https://www.shortsync.app), a social media scheduler for creators and small teams. Your AI assistant can upload videos and images, write a caption for each platform, and post or schedule them to 17 social platforms at once, then read the analytics and reply to comments.
 
 This is a **hosted remote server**. There is nothing to install or run: point your client at the URL below and sign in with your ShortSync account.

@@ -1,6 +1,6 @@
 {
   "name": "shortsync",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Schedule videos, images and posts to 17 social platforms from Gemini CLI, read analytics and reply to comments.",
   "mcpServers": {
     "shortsync": {
