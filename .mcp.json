@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "shortsync": {
+      "type": "http",
+      "url": "https://www.shortsync.app/api/mcp"
+    }
+  }
+}

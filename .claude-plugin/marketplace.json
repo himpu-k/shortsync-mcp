@@ -1,0 +1,14 @@
+{
+  "name": "shortsync",
+  "owner": {
+    "name": "ShortSync",
+    "email": "hilma@shortsync.app"
+  },
+  "plugins": [
+    {
+      "name": "shortsync",
+      "source": "./",
+      "description": "Schedule videos, images and posts to 17 social platforms, read analytics and reply to comments."
+    }
+  ]
+}
