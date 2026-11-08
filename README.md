@@ -18,6 +18,7 @@ This is a **hosted remote server**. There is nothing to install or run: point yo
 | Transport | Streamable HTTP |
 | Auth | OAuth 2.1 (sign in and approve in the browser) |
 | Registry | `app.shortsync/shortsync` in the [official MCP Registry](https://registry.modelcontextprotocol.io) |
+| Server card | [`/.well-known/mcp.json`](https://www.shortsync.app/.well-known/mcp.json) lists every tool without signing in |
 | Docs | https://www.shortsync.app/docs/mcp |
 | Price | Works on every plan, including the free plan (5 uploads a month) |
 
@@ -88,15 +89,18 @@ Add this to your MCP config (`.cursor/mcp.json`, `.vscode/mcp.json`, `claude_des
 
 | Area | Tools |
 |---|---|
-| Account and workspaces | `get_user_profile`, `list_organizations`, `list_workspaces`, `list_platform_connections`, `list_pinterest_boards`, `list_discord_channels` |
+| Status and accounts | `get_workspace_status` (broken connections, failed posts, the coming week, quota), `get_user_profile`, `list_organizations`, `list_workspaces`, `list_platform_connections` |
+| Connecting accounts | `get_connect_link` (a sign-in link for the user), `connect_discord_webhook`, Facebook Page and LinkedIn author pickers, Pinterest boards, Discord channels |
 | Library | `create_video_upload`, `create_video_upload_from_url`, `finalize_video_upload`, `list_video_uploads`, `create_carousel`, folders |
-| Posts | `create_post_drafts`, `update_post`, `batch_update_posts`, `replace_post_media`, custom thumbnails, content concepts |
-| Publishing | `schedule_post`, `batch_schedule_posts`, `publish_now`, `batch_publish_now`, `list_scheduled_posts`, `cancel_scheduled_post` |
+| Imports | `import_items`, `list_import_items`, OpusClip projects and clips |
+| Posts | `create_post_drafts`, `create_text_post`, `update_post`, `batch_update_posts`, `replace_post_media`, custom thumbnails, content concepts |
+| Publishing | `schedule_post`, `batch_schedule_posts`, `publish_now`, `batch_publish_now`, `list_scheduled_posts`, `cancel_scheduled_post`, `retry_post`, posting slots |
 | Repurposing | Workflows that repost an Instagram or Facebook account's posts to your other accounts |
-| Analytics | Workspace, folder, video and post analytics, `sync_analytics` |
-| Inbox | List comments and DMs, `reply_to_comment`, likes, mark seen or spam |
+| Analytics | Workspace, folder, video and post analytics, account growth, `sync_analytics` |
+| Inbox | List comments and DMs, `reply_to_comment`, saved replies, likes, mark seen or spam, comment-to-DM rules |
+| Team | Workspace members, invitations and roles |
 
-Ask your client to run `tools/list` for the current set. Every tool has read-only or destructive hints, so clients can ask before anything is posted.
+Ask your client to run `tools/list` for the current set, or read the [server card](https://www.shortsync.app/.well-known/mcp.json). Every tool has read-only or destructive hints, so clients can ask before anything is posted.
 
 ## Example prompts
 
