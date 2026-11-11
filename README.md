@@ -91,14 +91,18 @@ Add this to your MCP config (`.cursor/mcp.json`, `.vscode/mcp.json`, `claude_des
 |---|---|
 | Status and accounts | `get_workspace_status` (broken connections, failed posts, the coming week, quota), `get_user_profile`, `list_organizations`, `list_workspaces`, `list_platform_connections` |
 | Connecting accounts | `get_connect_link` (a sign-in link for the user), `connect_discord_webhook`, Facebook Page and LinkedIn author pickers, Pinterest boards, Discord channels |
-| Library | `create_video_upload`, `create_video_upload_from_url`, `finalize_video_upload`, `list_video_uploads`, `create_carousel`, folders |
+| Library | `create_video_upload`, `create_video_upload_from_url`, `finalize_video_upload`, `list_video_uploads`, `delete_upload`, `create_carousel`, folders and `move_video_to_folder` |
 | Imports | `import_items`, `list_import_items`, OpusClip projects and clips |
-| Posts | `create_post_drafts`, `create_text_post`, `update_post`, `batch_update_posts`, `replace_post_media`, custom thumbnails, content concepts |
-| Publishing | `schedule_post`, `batch_schedule_posts`, `publish_now`, `batch_publish_now`, `list_scheduled_posts`, `cancel_scheduled_post`, `retry_post`, posting slots |
+| Posts | `create_post_drafts`, `create_text_post`, `get_post_details`, `update_post`, `batch_update_posts`, `replace_post_media`, custom thumbnails, LinkedIn mentions (`resolve_linkedin_mention`), content concepts |
+| Publishing | `schedule_post`, `batch_schedule_posts`, `publish_now`, `batch_publish_now`, `list_scheduled_posts`, `cancel_scheduled_post`, `retry_post`, `delete_published_post`, posting slots |
 | Repurposing | Workflows that repost an Instagram or Facebook account's posts to your other accounts |
-| Analytics | Workspace, folder, video and post analytics, account growth, `sync_analytics` |
-| Inbox | List comments and DMs, `reply_to_comment`, saved replies, likes, mark seen or spam, comment-to-DM rules |
-| Team | Workspace members, invitations and roles |
+| Analytics | Workspace, folder, video and post analytics, account growth, `compare_instagram_accounts`, `explain_post_analytics_state`, `sync_analytics` |
+| Inbox | List comments and DMs, `sync_inbox`, `load_more_comments`, `reply_to_comment`, saved replies, likes, mark seen or spam |
+| DM automation | Instagram comment-to-DM rules: keywords, several DM versions, buttons and cards, a follow check or email step before the link (`list_dm_contacts` returns the emails), files, and AI answers to follow-up replies |
+| Team | Workspace members, invitations and roles, workspace people (`list_workspace_people`, `upsert_workspace_person`) |
+| Billing | `upgrade_plan` returns a checkout link for a plan upgrade or add-on |
+
+Prompts: `status_check`, `post_everywhere`, `weekly_report`, `reply_to_comments` and `connect_account` are ready-made starting points in clients that show MCP prompts.
 
 Ask your client to run `tools/list` for the current set, or read the [server card](https://www.shortsync.app/.well-known/mcp.json). Every tool has read-only or destructive hints, so clients can ask before anything is posted.
 
